@@ -1,13 +1,20 @@
+#!/bin/env python3
+
 from entities.cell import Cell
 
-
+"""
+Class representing a grid
+"""
 class Grid:
     def __init__(self, size: int):
         self.size = size
         self.grid = [[] * size] * size
+
+        self.alive_cell_counter = 0
+
         for i in range(size):
             for j in range(size):
-                self.grid[i][j] = Cell(i, j)
+                self.grid[i][j] = Cell(i, j, self)
 
     @classmethod
     def from_grid(cls, other_grid):
