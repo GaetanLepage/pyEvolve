@@ -15,10 +15,10 @@ class Engine:
         """
         self.current_grid = Grid(grid_size)
         self.next_grid = Grid(grid_size)
-        
+
         # Instance of a class managing the display and the interaction
         self.ui = None
-    
+
     def start(self):
         # TODO
 

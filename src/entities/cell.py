@@ -9,7 +9,7 @@ class Cell:
 
     def __init__(self, ipos, jpos, grid, state=0):
         """
-        Constructor for class cell    
+        Constructor for class cell
         """
         # Cell position
         self.ipos = ipos
@@ -47,5 +47,5 @@ class Cell:
         for neighbor in self.grid.neighbors(self):
             if neighbor.state:
                 n_alive_neighbors += 1
-        
+
         return n_alive_neighbors
