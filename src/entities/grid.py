@@ -8,7 +8,7 @@ Class representing a grid
 class Grid:
     def __init__(self, size: int):
         self.size = size
-        self.grid = [[] * size] * size
+        self.grid = [[0] * size] * size
 
         self.alive_cell_counter = 0
 

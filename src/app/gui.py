@@ -1,8 +1,16 @@
 import wx
 
-app = wx.App()
+class Gui(wx.Frame):
 
-frame = wx.Frame(None, title = 'A simple game of life')
-frame.Show()
+    def __init__(self, *args, **kw):
+        super(Gui, self).__init__(*args, **kw)
+        self.initUI()
 
-app.MainLoop()
+    def initUI(self):
+        self.SetTitle("Bouh")
+        self.Centre()
+
+    def drawGrid(self, grid):
+        print("Size : ", self.GetSize())
+        print("Grid size : ", grid.size)
+
